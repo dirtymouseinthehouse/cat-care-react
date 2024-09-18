@@ -1,15 +1,26 @@
-import { Box, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import Cat2 from "../../assets/cat2.jpg";
+import { CheckCircle } from "@mui/icons-material";
+import { deepOrange } from "@mui/material/colors";
 
-export default function About() {
+export default function About({ aboutRef }) {
   return (
     <Box
+      ref={aboutRef}
       sx={{
-        mt: "240px",
+        mt: { xs: "200px", sm: "280px" },
         display: "flex",
-        width: "70%",
-        padding: "2rem",
+        width: { xs: "100%", md: "80%" },
+        // padding: { xs: 0, md: "2rem" },
         alignItems: "flex-start",
         justifyContent: "space-evenly",
       }}
@@ -42,17 +53,39 @@ export default function About() {
           background: "red",
         }}
       >
-        <Typography sx={{ typography: { xs: "h6", md: "h4" } }}>
-          About Us
+        <Typography fontWeight={"bold"} fontSize={{ xs: "18px", md: "40px" }}>
+          Your Pet Is In Good Hands With Our Team!
         </Typography>
         <Typography sx={{ typography: { xs: "body2", md: "body1" } }}>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature,{" "}
+          Contrary to popular belief, Lorem Ipsum is not simply random text.
         </Typography>
+        <List>
+          <ListItem>
+            <ListItemAvatar>
+              <CheckCircle fontSize="large" color="primary" />
+            </ListItemAvatar>
+            <Typography fontSize={{ xs: "10px", md: "16px" }}>
+              Experienced staff W/Pet CPR/First Aid Training
+            </Typography>
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <CheckCircle fontSize="large" color="primary" />
+            </ListItemAvatar>
+            <Typography fontSize={{ xs: "10px", md: "16px" }}>
+              Experienced staff W/Pet CPR/First Aid Training
+            </Typography>
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <CheckCircle fontSize="large" color="primary" />
+            </ListItemAvatar>
+            {/* <ListItemText primary="Experienced staff W/Pet CPR/First Aid Training" /> */}
+            <Typography fontSize={{ xs: "10px", md: "16px" }}>
+              Experienced staff W/Pet CPR/First Aid Training
+            </Typography>
+          </ListItem>
+        </List>
       </Box>
     </Box>
   );
