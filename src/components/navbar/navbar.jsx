@@ -177,19 +177,36 @@ function Navbar({ aboutRef, servicesRef }) {
               alignItems: "center",
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={() => {
-                  servicesRef.current?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
-                sx={{ my: 2, display: "block", color: "black" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={() => {
+                aboutRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              sx={{ my: 2, display: "block", color: "black" }}
+            >
+              About
+            </Button>
+            <Button
+              onClick={() => {
+                servicesRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              sx={{ my: 2, display: "block", color: "black" }}
+            >
+              Services
+            </Button>
+            <Button
+              onClick={() => {
+                servicesRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              sx={{ my: 2, display: "block", color: "black" }}
+            >
+              Contact
+            </Button>
           </Box>
           <Box
             sx={{

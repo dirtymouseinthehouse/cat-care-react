@@ -10,6 +10,8 @@ const Services = ({ servicesRef }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        paddingX: "4rem",
+        // justifyContent: "center",
         // gap: "1.5rem",
       }}
     >
@@ -34,6 +36,9 @@ const Services = ({ servicesRef }) => {
           display: "flex",
           flexWrap: "wrap",
           gap: "2.8rem",
+          justifyContent: "center",
+          mt: "50px",
+          // alignItems: "center",
         }}
       >
         <ServiceCard />
