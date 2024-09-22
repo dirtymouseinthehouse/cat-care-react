@@ -11,6 +11,7 @@ const Services = ({ servicesRef }) => {
         flexDirection: "column",
         alignItems: "center",
         paddingX: "4rem",
+        mt: "100px",
         // justifyContent: "center",
         // gap: "1.5rem",
       }}

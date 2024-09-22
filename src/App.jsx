@@ -8,10 +8,13 @@ import Footer from "./components/footer/footer";
 import Loader from "./components/ui/loader";
 import Services from "./components/services/services";
 import CssBaseline from "@mui/material/CssBaseline";
+import ContactUs from "./components/contactus/contact-us";
 
 function App() {
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
+  const contactusRef = useRef(null);
+  const headerRef = useRef(null);
 
   return (
     <>
@@ -27,12 +30,18 @@ function App() {
           overflowX: { xs: "hidden", md: "visible" },
         }}
       >
-        <Navbar aboutRef={aboutRef} servicesRef={servicesRef} />
+        <Navbar
+          aboutRef={aboutRef}
+          servicesRef={servicesRef}
+          contactusRef={contactusRef}
+          headerRef={headerRef}
+        />
         <Suspense fallback={<Loader />}>
-          <MyCarousel />
+          <MyCarousel headerRef={headerRef} />
         </Suspense>
         <About aboutRef={aboutRef} />
         <Services servicesRef={servicesRef} />
+        <ContactUs contactusRef={contactusRef} />
         <Footer />
       </Box>
     </>

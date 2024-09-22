@@ -43,13 +43,14 @@ function Item({ imageSrc }) {
   );
 }
 
-export default function MyCarousel() {
+export default function MyCarousel({ headerRef }) {
   return (
     <Box
       sx={{
         width: { xs: "90%", sm: "80%" },
         height: "100px",
       }}
+      ref={headerRef}
     >
       <Carousel
         style={{

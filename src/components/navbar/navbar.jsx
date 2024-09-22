@@ -17,7 +17,7 @@ import "./styles.css";
 
 const pages = ["About", "Services", "Contact"];
 
-function Navbar({ aboutRef, servicesRef }) {
+function Navbar({ aboutRef, servicesRef, contactusRef, headerRef }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // anchorElNav -> variable
   // setAnchorElNav -> function
@@ -70,7 +70,11 @@ function Navbar({ aboutRef, servicesRef }) {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            onClick={() => {
+              headerRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -126,6 +130,7 @@ function Navbar({ aboutRef, servicesRef }) {
               <MenuItem
                 key={"about"}
                 onClick={() => {
+                  handleCloseNavMenu();
                   aboutRef.current?.scollIntoView({
                     behavior: "smooth",
                   });
@@ -136,6 +141,7 @@ function Navbar({ aboutRef, servicesRef }) {
               <MenuItem
                 key={"services"}
                 onClick={() => {
+                  handleCloseNavMenu();
                   servicesRef.current?.scrollIntoView({
                     behavior: "smooth",
                   });
@@ -143,7 +149,15 @@ function Navbar({ aboutRef, servicesRef }) {
               >
                 <Typography sx={{ textAlign: "center" }}>Services</Typography>
               </MenuItem>
-              <MenuItem key={"contact"} onClick={handleCloseNavMenu}>
+              <MenuItem
+                key={"contact"}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  contactusRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 <Typography sx={{ textAlign: "center" }}>Contact</Typography>
               </MenuItem>
             </Menu>
@@ -166,6 +180,11 @@ function Navbar({ aboutRef, servicesRef }) {
               component="img"
               sx={{ height: 54, marginRight: 3 }}
               alt="Logo"
+              onClick={() => {
+                headerRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
               src={Logo}
             />
           </Link>
@@ -199,7 +218,7 @@ function Navbar({ aboutRef, servicesRef }) {
             </Button>
             <Button
               onClick={() => {
-                servicesRef.current?.scrollIntoView({
+                contactusRef.current?.scrollIntoView({
                   behavior: "smooth",
                 });
               }}
