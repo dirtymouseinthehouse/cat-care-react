@@ -2,13 +2,14 @@ import { Avatar, Paper, Typography } from "@mui/material";
 import React from "react";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 
-const ServiceCard = () => {
+const ServiceCard = ({ item }) => {
   return (
     <Paper
       sx={{
         bgcolor: "primary.main",
         color: "white",
         display: "flex",
+        // height: "100%",
         flexDirection: "column",
         maxWidth: "280px",
         alignItems: "center",
@@ -16,17 +17,18 @@ const ServiceCard = () => {
         padding: "1rem",
         gap: "0.5rem",
       }}
+      elevation={2}
     >
       {/* icon */}
       {/* <Avatar> */}
-      <HealthAndSafetyIcon fontSize="large" />
+      {/* <HealthAndSafetyIcon fontSize="large" /> */}
+      {item.icon}
       {/* </Avatar> */}
-      <Typography>Health & Wellness</Typography>
-      <Typography fontSize={{ xs: "10px", md: "14px" }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+      <Typography fontSize={{ xs: "12px", md: "18px" }}>
+        {item.title}
+      </Typography>
+      <Typography fontSize={{ xs: "10px", md: "14px" }} textAlign={"center"}>
+        {item.description}
       </Typography>
     </Paper>
   );

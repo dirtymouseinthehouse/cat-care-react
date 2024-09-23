@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import Cat2 from "../../assets/cat2.jpg";
+import Cat8 from "../../assets/cat8.jpg";
 import { CheckCircle } from "@mui/icons-material";
 import { deepOrange } from "@mui/material/colors";
 
@@ -34,7 +35,7 @@ export default function About({ aboutRef }) {
       >
         <Box
           component="img"
-          src={Cat2}
+          src={Cat8}
           sx={{
             // width: "100%",
             borderRadius: "14px",
@@ -65,7 +66,7 @@ export default function About({ aboutRef }) {
               <CheckCircle fontSize="large" color="primary" />
             </ListItemAvatar>
             <Typography fontSize={{ xs: "10px", md: "16px" }}>
-              Experienced staff W/Pet CPR/First Aid Training
+              Professional care tailored for your cat’s comfort and well-being.
             </Typography>
           </ListItem>
           <ListItem>
@@ -73,7 +74,7 @@ export default function About({ aboutRef }) {
               <CheckCircle fontSize="large" color="primary" />
             </ListItemAvatar>
             <Typography fontSize={{ xs: "10px", md: "16px" }}>
-              Experienced staff W/Pet CPR/First Aid Training
+              Expert grooming with gentle, cat-friendly techniques.
             </Typography>
           </ListItem>
           <ListItem>
@@ -82,7 +83,7 @@ export default function About({ aboutRef }) {
             </ListItemAvatar>
             {/* <ListItemText primary="Experienced staff W/Pet CPR/First Aid Training" /> */}
             <Typography fontSize={{ xs: "10px", md: "16px" }}>
-              Experienced staff W/Pet CPR/First Aid Training
+              A safe, calming environment your feline will love.
             </Typography>
           </ListItem>
         </List>

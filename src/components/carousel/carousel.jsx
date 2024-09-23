@@ -2,6 +2,9 @@ import Cat1 from "../../assets/cat1.jpg";
 import Cat2 from "../../assets/cat2.jpg";
 import Cat3 from "../../assets/cat3.jpg";
 import Cat4 from "../../assets/cat4.jpg";
+import Cat5 from "../../assets/cat5.jpg";
+import Cat6 from "../../assets/cat6.jpg";
+import Cat7 from "../../assets/cat7.jpg";
 import { Box, Button, Paper, Typography } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 
@@ -57,9 +60,10 @@ export default function MyCarousel({ headerRef }) {
           position: "relative",
         }}
       >
-        <Item key={1} imageSrc={Cat1} />
-        <Item key={2} imageSrc={Cat3} />
-        <Item key={3} imageSrc={Cat4} />
+        <Item key={1} imageSrc={Cat7} />
+        <Item key={2} imageSrc={Cat6} />
+        <Item key={3} imageSrc={Cat5} />
+        <Item key={3} imageSrc={Cat1} />
       </Carousel>
 
       <Box
